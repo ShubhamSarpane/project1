@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+            th:replace="base::layout(~{::section})">
+<head>
+    <meta charset="UTF-8"/>
+    <title>This is Signup page</title>    
+</head>
+<body>
+
+      <section class="banner d-flex justify-content-center align-items-center">
+             <div class="container">
+             <form th:action="@{/do_register}" method="post" th:object="${user}">
+             
+             <!-- for User Name-->
+              <div class="mb-3">
+                     <label for="exampleFormControlInput1" class="form-label" >User Name</label>
+                     <input type="text" class="form-control"  placeholder="user name" name="userName">
+                </div>
+                
+              <!-- for Phone No-->
+              <div class="mb-3">
+                     <label for="exampleFormControlInput1" class="form-label">Enter your phone no</label>
+                     <input type="text" class="form-control"  placeholder="phone number" name="phoneNo">
+                </div>   
+             
+             <!--for email-->
+                <div class="mb-3">
+                     <label for="exampleFormControlInput1" class="form-label">Email address</label>
+                     <input type="email" class="form-control"  placeholder="name@example.com" name="email">
+                </div>
+                
+                <!-- for Addhar no-->
+              <div class="mb-3">
+                     <label for="exampleFormControlInput1" class="form-label">Enter your Aadhar no</label>
+                     <input type="text" class="form-control"  placeholder="aadhar no" name="aadharNo">
+                </div>
+                
+                
+                <!-- for Pan no-->
+              <div class="mb-3">
+                     <label for="exampleFormControlInput1" class="form-label">Enter your Pan no</label>
+                     <input type="text" class="form-control"  placeholder="Pan no" name="panNo">
+                </div>
+                
+                <!-- for Pan no-->
+              <div class="mb-3">
+                     <label for="exampleFormControlInput1" class="form-label">Enter your Address here</label>
+                     <input type="text" class="form-control"  placeholder="address" name="address">
+                </div>
+                
+                
+                   <!--tearm and condition agreement-->
+                         
+                          <div class= "form-group form-check ">
+                          
+                             <input type="checkbox"
+                             name="agreement"
+                             class="form-check-input"
+                             id="agreement"
+                             />
+                             
+                             <label for="agreement">Accept terms and condition</label>
+                                  
+                          
+                          </div>
+                          
+                          
+                          
+                          
+                          <div class="container text-center">
+                          
+                          <button type="submit" class="btn bg-primary btn-block text-white">
+                             Submit
+                          </button>
+                          <button type="reset" class="btn bg-warning btn-block">
+                             Reset
+                          </button>
+                          
+                          
+                          </div>
+                
+                
+             </form> 
+             </div>
+      </section >
+     
+
+</body>
+</html >
